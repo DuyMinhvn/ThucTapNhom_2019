@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -307,9 +308,13 @@
 =======
             this.components = new System.ComponentModel.Container();
 >>>>>>> parent of 9b57882... bt1_Long
+=======
+            this.components = new System.ComponentModel.Container();
+>>>>>>> parent of 9b57882... bt1_Long
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -348,6 +353,12 @@
         private System.Windows.Forms.Button button_sua;
         private System.Windows.Forms.Button button_them;
         private System.Windows.Forms.Button button_huongdan;
+=======
+            this.Text = "Form1";
+        }
+
+        #endregion
+>>>>>>> parent of 9b57882... bt1_Long
 =======
             this.Text = "Form1";
         }
