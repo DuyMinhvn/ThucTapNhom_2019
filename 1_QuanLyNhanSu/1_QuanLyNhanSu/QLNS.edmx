@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLNSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ChucVu">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenChucVu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CongTac">
+          <Key>
+            <PropertyRef Name="MaCongTac" />
+          </Key>
+          <Property Name="MaCongTac" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaNhanVien" Type="varchar" MaxLength="10" />
+          <Property Name="MaChucVu" Type="varchar" MaxLength="10" />
+          <Property Name="MaPhongBan" Type="varchar" MaxLength="10" />
+          <Property Name="Luong" Type="money" />
+          <Property Name="NgayNhanChuc" Type="date" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+          <Property Name="DanToc" Type="nvarchar" MaxLength="50" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="SDT" Type="char" MaxLength="15" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="MaTrinhDoHocVan" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PhongBan">
+          <Key>
+            <PropertyRef Name="MaPhongBan" />
+          </Key>
+          <Property Name="MaPhongBan" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenPhongBan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="TrinhDoHocVan">
+          <Key>
+            <PropertyRef Name="MaTrinhDoHocVan" />
+          </Key>
+          <Property Name="MaTrinhDoHocVan" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenTrinhDoHocVan" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChuyenNganh" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CongTac__MaChucV__2B3F6F97">
+          <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChucVu">
+              <PropertyRef Name="MaChucVu" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaChucVu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CongTac__MaNhanV__2C3393D0">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CongTac__MaPhong__2D27B809">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPhongBan" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaPhongBan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NhanVien__MaTrin__2E1BDC42">
+          <End Role="TrinhDoHocVan" Type="Self.TrinhDoHocVan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoHocVan">
+              <PropertyRef Name="MaTrinhDoHocVan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="MaTrinhDoHocVan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLNSModelStoreContainer">
+          <EntitySet Name="ChucVu" EntityType="Self.ChucVu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CongTac" EntityType="Self.CongTac" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhongBan" EntityType="Self.PhongBan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrinhDoHocVan" EntityType="Self.TrinhDoHocVan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CongTac__MaChucV__2B3F6F97" Association="Self.FK__CongTac__MaChucV__2B3F6F97">
+            <End Role="ChucVu" EntitySet="ChucVu" />
+            <End Role="CongTac" EntitySet="CongTac" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CongTac__MaNhanV__2C3393D0" Association="Self.FK__CongTac__MaNhanV__2C3393D0">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="CongTac" EntitySet="CongTac" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CongTac__MaPhong__2D27B809" Association="Self.FK__CongTac__MaPhong__2D27B809">
+            <End Role="PhongBan" EntitySet="PhongBan" />
+            <End Role="CongTac" EntitySet="CongTac" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__MaTrin__2E1BDC42" Association="Self.FK__NhanVien__MaTrin__2E1BDC42">
+            <End Role="TrinhDoHocVan" EntitySet="TrinhDoHocVan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLNSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChucVu">
+          <Key>
+            <PropertyRef Name="MaChucVu" />
+          </Key>
+          <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CongTacs" Relationship="Self.FK__CongTac__MaChucV__2B3F6F97" FromRole="ChucVu" ToRole="CongTac" />
+        </EntityType>
+        <EntityType Name="CongTac">
+          <Key>
+            <PropertyRef Name="MaCongTac" />
+          </Key>
+          <Property Name="MaCongTac" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhongBan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NgayNhanChuc" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ChucVu" Relationship="Self.FK__CongTac__MaChucV__2B3F6F97" FromRole="CongTac" ToRole="ChucVu" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__CongTac__MaNhanV__2C3393D0" FromRole="CongTac" ToRole="NhanVien" />
+          <NavigationProperty Name="PhongBan" Relationship="Self.FK__CongTac__MaPhong__2D27B809" FromRole="CongTac" ToRole="PhongBan" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DanToc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="MaTrinhDoHocVan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CongTacs" Relationship="Self.FK__CongTac__MaNhanV__2C3393D0" FromRole="NhanVien" ToRole="CongTac" />
+          <NavigationProperty Name="TrinhDoHocVan" Relationship="Self.FK__NhanVien__MaTrin__2E1BDC42" FromRole="NhanVien" ToRole="TrinhDoHocVan" />
+        </EntityType>
+        <EntityType Name="PhongBan">
+          <Key>
+            <PropertyRef Name="MaPhongBan" />
+          </Key>
+          <Property Name="MaPhongBan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenPhongBan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="CongTacs" Relationship="Self.FK__CongTac__MaPhong__2D27B809" FromRole="PhongBan" ToRole="CongTac" />
+        </EntityType>
+        <EntityType Name="TrinhDoHocVan">
+          <Key>
+            <PropertyRef Name="MaTrinhDoHocVan" />
+          </Key>
+          <Property Name="MaTrinhDoHocVan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenTrinhDoHocVan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__MaTrin__2E1BDC42" FromRole="TrinhDoHocVan" ToRole="NhanVien" />
+        </EntityType>
+        <Association Name="FK__CongTac__MaChucV__2B3F6F97">
+          <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChucVu">
+              <PropertyRef Name="MaChucVu" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaChucVu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CongTac__MaNhanV__2C3393D0">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CongTac__MaPhong__2D27B809">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="CongTac" Type="Self.CongTac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPhongBan" />
+            </Principal>
+            <Dependent Role="CongTac">
+              <PropertyRef Name="MaPhongBan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NhanVien__MaTrin__2E1BDC42">
+          <End Role="TrinhDoHocVan" Type="Self.TrinhDoHocVan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrinhDoHocVan">
+              <PropertyRef Name="MaTrinhDoHocVan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="MaTrinhDoHocVan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLNSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
+          <EntitySet Name="CongTacs" EntityType="Self.CongTac" />
+          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+          <EntitySet Name="PhongBans" EntityType="Self.PhongBan" />
+          <EntitySet Name="TrinhDoHocVans" EntityType="Self.TrinhDoHocVan" />
+          <AssociationSet Name="FK__CongTac__MaChucV__2B3F6F97" Association="Self.FK__CongTac__MaChucV__2B3F6F97">
+            <End Role="ChucVu" EntitySet="ChucVus" />
+            <End Role="CongTac" EntitySet="CongTacs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CongTac__MaNhanV__2C3393D0" Association="Self.FK__CongTac__MaNhanV__2C3393D0">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="CongTac" EntitySet="CongTacs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CongTac__MaPhong__2D27B809" Association="Self.FK__CongTac__MaPhong__2D27B809">
+            <End Role="PhongBan" EntitySet="PhongBans" />
+            <End Role="CongTac" EntitySet="CongTacs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__MaTrin__2E1BDC42" Association="Self.FK__NhanVien__MaTrin__2E1BDC42">
+            <End Role="TrinhDoHocVan" EntitySet="TrinhDoHocVans" />
+            <End Role="NhanVien" EntitySet="NhanViens" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLNSModelStoreContainer" CdmEntityContainer="QLNSEntities">
+          <EntitySetMapping Name="ChucVus">
+            <EntityTypeMapping TypeName="QLNSModel.ChucVu">
+              <MappingFragment StoreEntitySet="ChucVu">
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CongTacs">
+            <EntityTypeMapping TypeName="QLNSModel.CongTac">
+              <MappingFragment StoreEntitySet="CongTac">
+                <ScalarProperty Name="MaCongTac" ColumnName="MaCongTac" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="NgayNhanChuc" ColumnName="NgayNhanChuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanViens">
+            <EntityTypeMapping TypeName="QLNSModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="MaTrinhDoHocVan" ColumnName="MaTrinhDoHocVan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhongBans">
+            <EntityTypeMapping TypeName="QLNSModel.PhongBan">
+              <MappingFragment StoreEntitySet="PhongBan">
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrinhDoHocVans">
+            <EntityTypeMapping TypeName="QLNSModel.TrinhDoHocVan">
+              <MappingFragment StoreEntitySet="TrinhDoHocVan">
+                <ScalarProperty Name="MaTrinhDoHocVan" ColumnName="MaTrinhDoHocVan" />
+                <ScalarProperty Name="TenTrinhDoHocVan" ColumnName="TenTrinhDoHocVan" />
+                <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

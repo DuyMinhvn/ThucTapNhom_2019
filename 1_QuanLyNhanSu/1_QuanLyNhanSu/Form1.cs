@@ -12,9 +12,11 @@ namespace _1_QuanLyNhanSu
 {
     public partial class Form1 : Form
     {
+        QLNSEntities obj = new QLNSEntities();
         public Form1()
         {
             InitializeComponent();
+            dataGridView1.DataSource = obj.NhanViens.ToList();
         }
     }
 }
