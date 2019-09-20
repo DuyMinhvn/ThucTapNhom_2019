@@ -16,7 +16,9 @@ namespace _1_QuanLyNhanSu
         public Form1()
         {
             InitializeComponent();
-            dataGridView1.DataSource = obj.NhanViens.ToList();
+            dataGridView_nhanvien.DataSource = obj.NhanViens.ToList();
+            dataGridView_nhanvien.Columns[8].Visible = false;
+            dataGridView_nhanvien.Columns[9].Visible = false;
         }
     }
 }
