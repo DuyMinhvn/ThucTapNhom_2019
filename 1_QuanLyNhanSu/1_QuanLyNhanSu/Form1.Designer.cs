@@ -46,6 +46,7 @@
             this.textBox_hoten = new System.Windows.Forms.TextBox();
             this.textBox_dantoc = new System.Windows.Forms.TextBox();
             this.textBox_sdt = new System.Windows.Forms.TextBox();
+            this.button_luu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,13 +55,14 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 296);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 281);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(786, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 150);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_luu);
             this.panel1.Controls.Add(this.textBox_sdt);
             this.panel1.Controls.Add(this.textBox_dantoc);
             this.panel1.Controls.Add(this.textBox_hoten);
@@ -78,10 +80,9 @@
             this.panel1.Controls.Add(this.button_sửa);
             this.panel1.Controls.Add(this.button_them);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 446);
+            this.panel1.Size = new System.Drawing.Size(762, 431);
             this.panel1.TabIndex = 2;
             // 
             // button_them
@@ -104,7 +105,7 @@
             // 
             // button_xoa
             // 
-            this.button_xoa.Location = new System.Drawing.Point(289, 14);
+            this.button_xoa.Location = new System.Drawing.Point(278, 14);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(75, 23);
             this.button_xoa.TabIndex = 4;
@@ -113,7 +114,7 @@
             // 
             // button_timkiem
             // 
-            this.button_timkiem.Location = new System.Drawing.Point(411, 15);
+            this.button_timkiem.Location = new System.Drawing.Point(529, 14);
             this.button_timkiem.Name = "button_timkiem";
             this.button_timkiem.Size = new System.Drawing.Size(75, 23);
             this.button_timkiem.TabIndex = 5;
@@ -220,6 +221,15 @@
             this.textBox_sdt.Size = new System.Drawing.Size(161, 20);
             this.textBox_sdt.TabIndex = 17;
             // 
+            // button_luu
+            // 
+            this.button_luu.Location = new System.Drawing.Point(402, 14);
+            this.button_luu.Name = "button_luu";
+            this.button_luu.Size = new System.Drawing.Size(75, 23);
+            this.button_luu.TabIndex = 18;
+            this.button_luu.Text = "Lưu";
+            this.button_luu.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +265,7 @@
         private System.Windows.Forms.Button button_xoa;
         private System.Windows.Forms.Button button_sửa;
         private System.Windows.Forms.Button button_them;
+        private System.Windows.Forms.Button button_luu;
     }
 }
 
