@@ -32,5 +32,11 @@ namespace _3_QuanLyThuVien
             frmController.show_panel( pnlDangNhap, false);
             frmController.show_panel( pnlDangKy, true);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmController.show_panel(pnlDangNhap, true);
+            frmController.show_panel(pnlDangKy, false);
+        }
     }
 }
