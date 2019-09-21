@@ -43,11 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.button_timkiem = new System.Windows.Forms.Button();
             this.button_xoa = new System.Windows.Forms.Button();
             this.button_sửa = new System.Windows.Forms.Button();
             this.button_them = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox_ma = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,9 +63,12 @@
             this.dataGridView_nhanvien.Name = "dataGridView_nhanvien";
             this.dataGridView_nhanvien.Size = new System.Drawing.Size(1016, 185);
             this.dataGridView_nhanvien.TabIndex = 1;
+            this.dataGridView_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_nhanvien_CellClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox_ma);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button_huongdan);
             this.panel1.Controls.Add(this.button_luu);
             this.panel1.Controls.Add(this.textBox_sdt);
@@ -212,16 +217,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Ngày sinh";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Họ tên";
-            // 
             // button_timkiem
             // 
             this.button_timkiem.Location = new System.Drawing.Point(705, 17);
@@ -263,6 +258,34 @@
             this.button_them.Text = "Thêm";
             this.button_them.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Họ tên";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(468, 193);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Mã Nv";
+            // 
+            // textBox_ma
+            // 
+            this.textBox_ma.Location = new System.Drawing.Point(573, 195);
+            this.textBox_ma.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_ma.Name = "textBox_ma";
+            this.textBox_ma.Size = new System.Drawing.Size(265, 22);
+            this.textBox_ma.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -295,13 +318,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_timkiem;
         private System.Windows.Forms.Button button_xoa;
         private System.Windows.Forms.Button button_sửa;
         private System.Windows.Forms.Button button_them;
         private System.Windows.Forms.Button button_luu;
         private System.Windows.Forms.Button button_huongdan;
+        private System.Windows.Forms.TextBox textBox_ma;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
     }
 }
 

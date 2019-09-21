@@ -28,12 +28,28 @@ namespace _1_QuanLyNhanSu
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox_ma.Enabled = false;
             textBox_hoten.Enabled = false;
             textBox_dantoc.Enabled = false;
             textBox_diachi.Enabled = false;
             textBox_sdt.Enabled = false;
             comboBox_gioitinh.Enabled = false;
             dateTimePicker_ngaysinh.Enabled = false;
+        }
+
+        private void dataGridView_nhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView_nhanvien.Rows.Count > 0)
+            {
+                foreach(DataGridViewRow row in dataGridView_nhanvien.SelectedRows)
+                {
+                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
+                    //textBox_dantoc.Text = row.Cells[0].Value.ToString();
+                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
+                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
+
+                }
+            }
         }
     }
 }
