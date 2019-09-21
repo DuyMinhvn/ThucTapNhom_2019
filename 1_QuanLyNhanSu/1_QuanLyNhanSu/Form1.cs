@@ -20,5 +20,20 @@ namespace _1_QuanLyNhanSu
             dataGridView_nhanvien.Columns[8].Visible = false;
             dataGridView_nhanvien.Columns[9].Visible = false;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox_hoten.Enabled = false;
+            textBox_dantoc.Enabled = false;
+            textBox_diachi.Enabled = false;
+            textBox_sdt.Enabled = false;
+            comboBox_gioitinh.Enabled = false;
+            dateTimePicker_ngaysinh.Enabled = false;
+        }
     }
 }
