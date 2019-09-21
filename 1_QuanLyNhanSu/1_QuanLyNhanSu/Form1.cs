@@ -68,6 +68,10 @@ namespace _1_QuanLyNhanSu
             textBox_sdt.Enabled = false;
             comboBox_gioitinh.Enabled = false;
             dateTimePicker_ngaysinh.Enabled = false;
+            textBox_Luong.Enabled = false;
+            comboBox_cv.Enabled = false;
+            comboBox_pb.Enabled = false;
+            comboBox_td.Enabled = false;
         }
 
         private void dataGridView_nhanvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -83,10 +87,19 @@ namespace _1_QuanLyNhanSu
                     textBox_sdt.Text = row.Cells[4].Value.ToString();
                     textBox_diachi.Text = row.Cells[5].Value.ToString();
                     dateTimePicker_ngaysinh.Text = row.Cells[6].Value.ToString();
+                    comboBox_pb.Text = row.Cells[7].Value.ToString();
+                    textBox_Luong.Text = row.Cells[8].Value.ToString();
+                    comboBox_cv.Text = row.Cells[9].Value.ToString();
+                    comboBox_td.Text = row.Cells[10].Value.ToString();
                     //textBox_hoten.Text = row.Cells[0].Value.ToString();
 
                 }
             }
+        }
+
+        private void textBox_Cv_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
