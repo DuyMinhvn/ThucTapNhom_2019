@@ -43,9 +43,13 @@ namespace _1_QuanLyNhanSu
             {
                 foreach(DataGridViewRow row in dataGridView_nhanvien.SelectedRows)
                 {
-                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
-                    //textBox_dantoc.Text = row.Cells[0].Value.ToString();
-                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
+                    textBox_ma.Text = row.Cells[0].Value.ToString();
+                    textBox_hoten.Text = row.Cells[1].Value.ToString();
+                    textBox_dantoc.Text = row.Cells[2].Value.ToString();
+                    comboBox_gioitinh.Text = row.Cells[3].Value.ToString();
+                    textBox_sdt.Text = row.Cells[4].Value.ToString();
+                    textBox_diachi.Text = row.Cells[5].Value.ToString();
+                    dateTimePicker_ngaysinh.Text = row.Cells[6].Value.ToString();
                     //textBox_hoten.Text = row.Cells[0].Value.ToString();
 
                 }
