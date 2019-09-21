@@ -70,6 +70,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -114,7 +115,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(22, 199);
+            this.button3.Location = new System.Drawing.Point(45, 199);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 45);
             this.button3.TabIndex = 7;
@@ -132,10 +133,11 @@
             this.pnlDangKy.Controls.Add(this.label4);
             this.pnlDangKy.Controls.Add(this.button4);
             this.pnlDangKy.Controls.Add(this.button5);
-            this.pnlDangKy.Location = new System.Drawing.Point(57, 269);
+            this.pnlDangKy.Location = new System.Drawing.Point(216, 39);
             this.pnlDangKy.Name = "pnlDangKy";
             this.pnlDangKy.Size = new System.Drawing.Size(426, 243);
             this.pnlDangKy.TabIndex = 7;
+            this.pnlDangKy.Visible = false;
             // 
             // textBox3
             // 
@@ -210,10 +212,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 496);
-            this.Controls.Add(this.pnlDangKy);
+            this.ClientSize = new System.Drawing.Size(665, 297);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pnlDangNhap);
+            this.Controls.Add(this.pnlDangKy);
             this.Name = "frmLogin";
             this.Text = "Form1";
             this.pnlDangNhap.ResumeLayout(false);
