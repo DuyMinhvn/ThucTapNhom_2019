@@ -145,7 +145,8 @@
             this.comboBox_gioitinh.FormattingEnabled = true;
             this.comboBox_gioitinh.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Không xác định"});
             this.comboBox_gioitinh.Location = new System.Drawing.Point(128, 157);
             this.comboBox_gioitinh.Name = "comboBox_gioitinh";
             this.comboBox_gioitinh.Size = new System.Drawing.Size(161, 21);
@@ -240,6 +241,7 @@
             this.button_them.TabIndex = 2;
             this.button_them.Text = "Thêm";
             this.button_them.UseVisualStyleBackColor = true;
+            this.button_them.Click += new System.EventHandler(this.themNhanvien);
             // 
             // Form1
             // 
