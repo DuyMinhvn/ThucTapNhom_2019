@@ -15,28 +15,30 @@ namespace _1_QuanLyNhanSu
         QLNSEntities obj = new QLNSEntities();
         public Form1()
         {
-            var model = (from nv in obj.NhanViens
-                         join ct in obj.CongTacs
-                         on nv.MaNhanVien equals ct.MaNhanVien
-                         join cv in obj.ChucVus on ct.MaChucVu equals cv.MaChucVu
-                         join pb in obj.PhongBans on ct.MaPhongBan equals pb.MaPhongBan
-                         join td in obj.TrinhDoHocVans on nv.MaTrinhDoHocVan equals td.MaTrinhDoHocVan
-                         select new
-                         {
-                             MaNhanVien = nv.MaNhanVien,
-                             HoTen = nv.HoTen,
-                             DanToc = nv.DanToc,
-                             GioiTinh = nv.GioiTinh,
-                             SDT = nv.SDT,
-                             QueQuan = nv.QueQuan,
-                             NgaySinh = nv.NgaySinh,
-                             TenPhongBan = pb.TenPhongBan,
-                             TenChucVu = cv.TenChucVu,
-                             Luong = ct.Luong,
-                             TenTDHv = td.TenTrinhDoHocVan
+            //using (var context = new QLNSEntities()) {
+                var model = (from nv in obj.NhanViens
+                             join ct in obj.CongTacs
+                             on nv.MaNhanVien equals ct.MaNhanVien
+                             join cv in obj.ChucVus on ct.MaChucVu equals cv.MaChucVu
+                             join pb in obj.PhongBans on ct.MaPhongBan equals pb.MaPhongBan
+                             join td in obj.TrinhDoHocVans on nv.MaTrinhDoHocVan equals td.MaTrinhDoHocVan
+                             select new
+                             {
+                                 MaNhanVien = nv.MaNhanVien,
+                                 HoTen = nv.HoTen,
+                                 DanToc = nv.DanToc,
+                                 GioiTinh = nv.GioiTinh,
+                                 SDT = nv.SDT,
+                                 QueQuan = nv.QueQuan,
+                                 NgaySinh = nv.NgaySinh,
+                                 TenPhongBan = pb.TenPhongBan,
+                                 TenChucVu = cv.TenChucVu,
+                                 Luong = ct.Luong,
+                                 TenTDHv = td.TenTrinhDoHocVan
 
-                         })
-                         ;
+                             });
+            //}
+                         
             InitializeComponent();
             dataGridView_nhanvien.DataSource = model.ToList();
             //dataGridView_nhanvien.Columns[8].Visible = false;
@@ -92,14 +94,27 @@ namespace _1_QuanLyNhanSu
                     comboBox_cv.Text = row.Cells[9].Value.ToString();
                     comboBox_td.Text = row.Cells[10].Value.ToString();
                     //textBox_hoten.Text = row.Cells[0].Value.ToString();
-
                 }
             }
         }
-
+        
         private void textBox_Cv_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void button_sửa_Click(object sender, EventArgs e)
+        {
+            textBox_ma.Enabled = false;
+            textBox_hoten.Enabled = true;
+            textBox_dantoc.Enabled = true;
+            textBox_diachi.Enabled = true;
+            textBox_sdt.Enabled = true;
+            comboBox_gioitinh.Enabled = true;
+            dateTimePicker_ngaysinh.Enabled = true;
+            textBox_Luong.Enabled = true;
+            comboBox_cv.Enabled = true;
+            comboBox_pb.Enabled = true;
+            comboBox_td.Enabled = true;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
