@@ -16,7 +16,7 @@ namespace _1_QuanLyNhanSu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMain());
         }
     }
 }
