@@ -30,6 +30,14 @@
         {
             this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_td = new System.Windows.Forms.ComboBox();
+            this.comboBox_cv = new System.Windows.Forms.ComboBox();
+            this.comboBox_pb = new System.Windows.Forms.ComboBox();
+            this.textBox_Luong = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox_ma = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button_huongdan = new System.Windows.Forms.Button();
@@ -50,14 +58,6 @@
             this.button_xoa = new System.Windows.Forms.Button();
             this.button_sửa = new System.Windows.Forms.Button();
             this.button_them = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_Luong = new System.Windows.Forms.TextBox();
-            this.comboBox_pb = new System.Windows.Forms.ComboBox();
-            this.comboBox_cv = new System.Windows.Forms.ComboBox();
-            this.comboBox_td = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,93 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 530);
             this.panel1.TabIndex = 2;
+            // 
+            // comboBox_td
+            // 
+            this.comboBox_td.FormattingEnabled = true;
+            this.comboBox_td.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Không xác định"});
+            this.comboBox_td.Location = new System.Drawing.Point(566, 227);
+            this.comboBox_td.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_td.Name = "comboBox_td";
+            this.comboBox_td.Size = new System.Drawing.Size(265, 24);
+            this.comboBox_td.TabIndex = 31;
+            // 
+            // comboBox_cv
+            // 
+            this.comboBox_cv.FormattingEnabled = true;
+            this.comboBox_cv.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Không xác định"});
+            this.comboBox_cv.Location = new System.Drawing.Point(566, 152);
+            this.comboBox_cv.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_cv.Name = "comboBox_cv";
+            this.comboBox_cv.Size = new System.Drawing.Size(265, 24);
+            this.comboBox_cv.TabIndex = 30;
+            // 
+            // comboBox_pb
+            // 
+            this.comboBox_pb.FormattingEnabled = true;
+            this.comboBox_pb.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Không xác định"});
+            this.comboBox_pb.Location = new System.Drawing.Point(566, 118);
+            this.comboBox_pb.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_pb.Name = "comboBox_pb";
+            this.comboBox_pb.Size = new System.Drawing.Size(265, 24);
+            this.comboBox_pb.TabIndex = 29;
+            // 
+            // textBox_Luong
+            // 
+            this.textBox_Luong.Location = new System.Drawing.Point(566, 198);
+            this.textBox_Luong.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Luong.Name = "textBox_Luong";
+            this.textBox_Luong.Size = new System.Drawing.Size(265, 22);
+            this.textBox_Luong.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(437, 230);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 17);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Tên Trình Độ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(457, 198);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 17);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Lương";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(437, 155);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 17);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Tên Chức Vụ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(437, 115);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 17);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Tên Phòng Ban";
             // 
             // textBox_ma
             // 
@@ -290,6 +377,7 @@
             this.button_sửa.TabIndex = 3;
             this.button_sửa.Text = "Sửa";
             this.button_sửa.UseVisualStyleBackColor = true;
+            this.button_sửa.Click += new System.EventHandler(this.button_sửa_Click);
             // 
             // button_them
             // 
@@ -301,93 +389,6 @@
             this.button_them.Text = "Thêm";
             this.button_them.UseVisualStyleBackColor = true;
             this.button_them.Click += new System.EventHandler(this.themNhanvien);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(437, 115);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 17);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Tên Phòng Ban";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(437, 155);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 17);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Tên Chức Vụ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(457, 198);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 17);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Lương";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(437, 230);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 17);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Tên Trình Độ";
-            // 
-            // textBox_Luong
-            // 
-            this.textBox_Luong.Location = new System.Drawing.Point(566, 198);
-            this.textBox_Luong.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox_Luong.Name = "textBox_Luong";
-            this.textBox_Luong.Size = new System.Drawing.Size(265, 22);
-            this.textBox_Luong.TabIndex = 28;
-            // 
-            // comboBox_pb
-            // 
-            this.comboBox_pb.FormattingEnabled = true;
-            this.comboBox_pb.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Không xác định"});
-            this.comboBox_pb.Location = new System.Drawing.Point(566, 118);
-            this.comboBox_pb.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_pb.Name = "comboBox_pb";
-            this.comboBox_pb.Size = new System.Drawing.Size(265, 24);
-            this.comboBox_pb.TabIndex = 29;
-            // 
-            // comboBox_cv
-            // 
-            this.comboBox_cv.FormattingEnabled = true;
-            this.comboBox_cv.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Không xác định"});
-            this.comboBox_cv.Location = new System.Drawing.Point(566, 152);
-            this.comboBox_cv.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_cv.Name = "comboBox_cv";
-            this.comboBox_cv.Size = new System.Drawing.Size(265, 24);
-            this.comboBox_cv.TabIndex = 30;
-            // 
-            // comboBox_td
-            // 
-            this.comboBox_td.FormattingEnabled = true;
-            this.comboBox_td.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Không xác định"});
-            this.comboBox_td.Location = new System.Drawing.Point(566, 227);
-            this.comboBox_td.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_td.Name = "comboBox_td";
-            this.comboBox_td.Size = new System.Drawing.Size(265, 24);
-            this.comboBox_td.TabIndex = 31;
             // 
             // Form1
             // 
