@@ -281,7 +281,7 @@
             this.comboBox_gioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
-            "Không xác định"});
+            "Không Xác Định"});
             this.comboBox_gioitinh.Location = new System.Drawing.Point(137, 155);
             this.comboBox_gioitinh.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_gioitinh.Name = "comboBox_gioitinh";

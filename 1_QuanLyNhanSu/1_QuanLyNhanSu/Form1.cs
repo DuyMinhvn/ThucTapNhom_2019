@@ -90,8 +90,8 @@ namespace _1_QuanLyNhanSu
                     textBox_diachi.Text = row.Cells[5].Value.ToString();
                     dateTimePicker_ngaysinh.Text = row.Cells[6].Value.ToString();
                     comboBox_pb.Text = row.Cells[7].Value.ToString();
-                    textBox_Luong.Text = row.Cells[8].Value.ToString();
-                    comboBox_cv.Text = row.Cells[9].Value.ToString();
+                    textBox_Luong.Text = row.Cells[9].Value.ToString();
+                    comboBox_cv.Text = row.Cells[8].Value.ToString();
                     comboBox_td.Text = row.Cells[10].Value.ToString();
                     //textBox_hoten.Text = row.Cells[0].Value.ToString();
                 }
@@ -115,6 +115,18 @@ namespace _1_QuanLyNhanSu
             comboBox_cv.Enabled = true;
             comboBox_pb.Enabled = true;
             comboBox_td.Enabled = true;
+            //hien lua chon o combobox ten phong ban
+            comboBox_pb.DataSource = obj.PhongBans.ToList();
+            comboBox_pb.DisplayMember = "TenPhongBan";
+            comboBox_pb.ValueMember = "MaPhongBan";
+            //hien thi lua chon o combobox chuc vu
+            comboBox_cv.DataSource = obj.ChucVus.ToList();
+            comboBox_cv.DisplayMember = "TenChucVu";
+            comboBox_cv.ValueMember = "MaChucVu";
+            //hien thi lua chon o combobox trinh do hoc van
+            comboBox_td.DataSource = obj.TrinhDoHocVans.ToList();
+            comboBox_td.DisplayMember = "TenTrinhDoHocVan";
+            comboBox_td.ValueMember = "MaTrinhDoHocVan";
         }
     }
 }
