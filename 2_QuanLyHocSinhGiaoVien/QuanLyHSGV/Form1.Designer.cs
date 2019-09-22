@@ -1,4 +1,4 @@
-﻿namespace QuanLyHocSinhGiaoVien
+﻿namespace QuanLyHSGV
 {
     partial class Form1
     {
@@ -32,10 +32,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 494);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(632, 278);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
