@@ -25,10 +25,10 @@ namespace _1_QuanLyNhanSu
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ChucVu> ChucVus { get; set; }
-        public virtual DbSet<CongTac> CongTacs { get; set; }
-        public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<PhongBan> PhongBans { get; set; }
-        public virtual DbSet<TrinhDoHocVan> TrinhDoHocVans { get; set; }
+        public virtual DbSet<ChucVu> ChucVu { get; set; }
+        public virtual DbSet<CongTac> CongTac { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
+        public virtual DbSet<PhongBan> PhongBan { get; set; }
+        public virtual DbSet<TrinhDoHocVan> TrinhDoHocVan { get; set; }
     }
 }

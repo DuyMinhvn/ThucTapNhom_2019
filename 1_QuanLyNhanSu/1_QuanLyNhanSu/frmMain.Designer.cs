@@ -87,6 +87,7 @@
             this.comboBox_ma_pb = new System.Windows.Forms.ComboBox();
             this.comboBox_ma_cv = new System.Windows.Forms.ComboBox();
             this.comboBox_ma_td = new System.Windows.Forms.ComboBox();
+            this.button_load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -106,6 +107,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_load);
             this.panel1.Controls.Add(this.comboBox_ma_td);
             this.panel1.Controls.Add(this.comboBox_ma_cv);
             this.panel1.Controls.Add(this.comboBox_ma_pb);
@@ -428,13 +430,14 @@
             // 
             // button_luu
             // 
-            this.button_luu.Location = new System.Drawing.Point(919, 267);
+            this.button_luu.Location = new System.Drawing.Point(919, 187);
             this.button_luu.Margin = new System.Windows.Forms.Padding(4);
             this.button_luu.Name = "button_luu";
             this.button_luu.Size = new System.Drawing.Size(100, 28);
             this.button_luu.TabIndex = 18;
             this.button_luu.Text = "Lưu";
             this.button_luu.UseVisualStyleBackColor = true;
+            this.button_luu.Click += new System.EventHandler(this.button_luu_Click);
             // 
             // textBox_sdt
             // 
@@ -551,7 +554,7 @@
             // 
             // button_xoa
             // 
-            this.button_xoa.Location = new System.Drawing.Point(919, 210);
+            this.button_xoa.Location = new System.Drawing.Point(919, 139);
             this.button_xoa.Margin = new System.Windows.Forms.Padding(4);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(100, 28);
@@ -561,7 +564,7 @@
             // 
             // button_sửa
             // 
-            this.button_sửa.Location = new System.Drawing.Point(919, 144);
+            this.button_sửa.Location = new System.Drawing.Point(919, 92);
             this.button_sửa.Margin = new System.Windows.Forms.Padding(4);
             this.button_sửa.Name = "button_sửa";
             this.button_sửa.Size = new System.Drawing.Size(100, 28);
@@ -572,7 +575,7 @@
             // 
             // button_them
             // 
-            this.button_them.Location = new System.Drawing.Point(919, 79);
+            this.button_them.Location = new System.Drawing.Point(919, 44);
             this.button_them.Margin = new System.Windows.Forms.Padding(4);
             this.button_them.Name = "button_them";
             this.button_them.Size = new System.Drawing.Size(100, 28);
@@ -645,6 +648,17 @@
             this.comboBox_ma_td.Name = "comboBox_ma_td";
             this.comboBox_ma_td.Size = new System.Drawing.Size(104, 24);
             this.comboBox_ma_td.TabIndex = 39;
+            // 
+            // button_load
+            // 
+            this.button_load.Location = new System.Drawing.Point(919, 229);
+            this.button_load.Margin = new System.Windows.Forms.Padding(4);
+            this.button_load.Name = "button_load";
+            this.button_load.Size = new System.Drawing.Size(100, 28);
+            this.button_load.TabIndex = 40;
+            this.button_load.Text = "Load";
+            this.button_load.UseVisualStyleBackColor = true;
+            this.button_load.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMain
             // 
@@ -727,6 +741,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button_load;
     }
 }
 
