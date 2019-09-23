@@ -13,6 +13,7 @@ namespace _1_QuanLyNhanSu
     public partial class frmMain : Form
     {
         QLNSEntities obj = new QLNSEntities();
+        bool btnThemcount = false;
         public frmMain()
         {
            
@@ -36,6 +37,70 @@ namespace _1_QuanLyNhanSu
         private void themNhanvien(object sender, EventArgs e)
         {
 
+            if (btnThemcount==false)
+            {
+                textBox_hoten.Enabled = true;
+                textBox_dantoc.Enabled = true;
+                textBox_quequan.Enabled = true;
+                textBox_Luong.Enabled = true;
+                textBox_ma.Enabled = true;
+                textBox_sdt.Enabled = true;
+                comboBox_gioitinh.Enabled = true;
+                dateTimePicker_ngaysinh.Enabled = true;
+                textBox_Luong.Enabled = true;
+                comboBox_cv.Enabled = true;
+                comboBox_pb.Enabled = true;
+                comboBox_td.Enabled = true;
+                btnThemcount = true;
+                foreach(TrinhDoHocVan tdo in obj.TrinhDoHocVan){
+                    comboBox_td.Items.Add(tdo.TenTrinhDoHocVan.ToString());
+                }
+                foreach (PhongBan pban in obj.PhongBan)
+                {
+                    comboBox_pb.Items.Add(pban.TenPhongBan.ToString());
+                }
+                foreach (ChucVu cvu in obj.ChucVu)
+                {
+                    comboBox_cv.Items.Add(cvu.TenChucVu.ToString());
+                }
+            }
+            else
+            {
+                NhanVien nvnew = new NhanVien();
+                nvnew.HoTen = textBox_hoten.Text;
+                nvnew.DanToc = textBox_dantoc.Text;
+                nvnew.GioiTinh = comboBox_gioitinh.Text;
+                nvnew.SDT = textBox_sdt.Text;
+                nvnew.NgaySinh = System.DateTime.Parse(dateTimePicker_ngaysinh.Text);
+                nvnew.QueQuan = textBox_quequan.Text;
+
+                textBox_ma.Enabled = false;
+                textBox_hoten.Enabled = false;
+                textBox_dantoc.Enabled = false;
+                textBox_quequan.Enabled = false;
+                textBox_sdt.Enabled = false;
+                comboBox_gioitinh.Enabled = false;
+                dateTimePicker_ngaysinh.Enabled = false;
+                textBox_Luong.Enabled = false;
+                comboBox_cv.Enabled = false;
+                comboBox_pb.Enabled = false;
+                comboBox_td.Enabled = false;
+                btnThemcount = false;
+                textBox_ma.Text = "";
+                textBox_hoten.Text = "";
+                textBox_dantoc.Text = "";
+                textBox_quequan.Text = "";
+                textBox_sdt.Text = "";
+                comboBox_gioitinh.Text = "";
+                dateTimePicker_ngaysinh.Text = "";
+                textBox_Luong.Text = "";
+                comboBox_cv.Text = "";
+                comboBox_pb.Text = "";
+                comboBox_td.Text = "";
+                comboBox_ma_pb.Text = "";
+                comboBox_ma_td.Text = "";
+                comboBox_ma_cv.Text = "";
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -47,7 +112,7 @@ namespace _1_QuanLyNhanSu
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = false;
             textBox_dantoc.Enabled = false;
-            textBox_diachi.Enabled = false;
+            textBox_quequan.Enabled = false;
             textBox_sdt.Enabled = false;
             comboBox_gioitinh.Enabled = false;
             dateTimePicker_ngaysinh.Enabled = false;
@@ -94,7 +159,7 @@ namespace _1_QuanLyNhanSu
                     textBox_dantoc.Text = row.Cells[2].Value.ToString();
                     comboBox_gioitinh.Text = row.Cells[3].Value.ToString();
                     textBox_sdt.Text = row.Cells[4].Value.ToString();
-                    textBox_diachi.Text = row.Cells[5].Value.ToString();
+                    textBox_quequan.Text = row.Cells[5].Value.ToString();
                     dateTimePicker_ngaysinh.Text = row.Cells[6].Value.ToString();
                     comboBox_pb.Text = row.Cells[7].Value.ToString();
                     textBox_Luong.Text = row.Cells[9].Value.ToString();
@@ -114,7 +179,7 @@ namespace _1_QuanLyNhanSu
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = true;
             textBox_dantoc.Enabled = true;
-            textBox_diachi.Enabled = true;
+            textBox_quequan.Enabled = true;
             textBox_sdt.Enabled = true;
             comboBox_gioitinh.Enabled = true;
             dateTimePicker_ngaysinh.Enabled = true;
@@ -156,7 +221,7 @@ namespace _1_QuanLyNhanSu
             nv.SDT = textBox_sdt.Text;
             nv.GioiTinh = comboBox_gioitinh.Text;
             nv.NgaySinh = DateTime.Parse(dateTimePicker_ngaysinh.Text);
-            nv.QueQuan = textBox_diachi.Text;
+            nv.QueQuan = textBox_quequan.Text;
             nv.MaTrinhDoHocVan = comboBox_ma_td.Text;
             var ct = obj.CongTac.First<CongTac>();
             ct.MaChucVu = comboBox_ma_cv.Text;
