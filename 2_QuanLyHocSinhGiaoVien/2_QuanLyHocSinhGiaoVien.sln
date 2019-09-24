@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_QuanLyHocSinhGiaoVien", "2_QuanLyHocSinhGiaoVien\2_QuanLyHocSinhGiaoVien.csproj", "{0D42C304-EFCC-495A-8E6C-A34BC7760EA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyHSGV", "QuanLyHSGV\QuanLyHSGV.csproj", "{B3172A02-6FF2-415E-99D2-1FFAC9B20653}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D42C304-EFCC-495A-8E6C-A34BC7760EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D42C304-EFCC-495A-8E6C-A34BC7760EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D42C304-EFCC-495A-8E6C-A34BC7760EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D42C304-EFCC-495A-8E6C-A34BC7760EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3172A02-6FF2-415E-99D2-1FFAC9B20653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3172A02-6FF2-415E-99D2-1FFAC9B20653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3172A02-6FF2-415E-99D2-1FFAC9B20653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3172A02-6FF2-415E-99D2-1FFAC9B20653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
