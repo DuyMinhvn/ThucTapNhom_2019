@@ -75,7 +75,7 @@
             this.textBox_sdt = new System.Windows.Forms.TextBox();
             this.textBox_dantoc = new System.Windows.Forms.TextBox();
             this.textBox_hoten = new System.Windows.Forms.TextBox();
-            this.textBox_diachi = new System.Windows.Forms.TextBox();
+            this.textBox_quequan = new System.Windows.Forms.TextBox();
             this.dateTimePicker_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.comboBox_gioitinh = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
             this.panel1.Controls.Add(this.textBox_sdt);
             this.panel1.Controls.Add(this.textBox_dantoc);
             this.panel1.Controls.Add(this.textBox_hoten);
-            this.panel1.Controls.Add(this.textBox_diachi);
+            this.panel1.Controls.Add(this.textBox_quequan);
             this.panel1.Controls.Add(this.dateTimePicker_ngaysinh);
             this.panel1.Controls.Add(this.comboBox_gioitinh);
             this.panel1.Controls.Add(this.label6);
@@ -495,15 +495,17 @@
             this.textBox_hoten.Size = new System.Drawing.Size(186, 20);
             this.textBox_hoten.TabIndex = 15;
             // 
-            // textBox_diachi
+            // textBox_quequan
             // 
-            this.textBox_diachi.Location = new System.Drawing.Point(103, 217);
-            this.textBox_diachi.Name = "textBox_diachi";
-            this.textBox_diachi.Size = new System.Drawing.Size(192, 20);
-            this.textBox_diachi.TabIndex = 14;
+            this.textBox_quequan.Location = new System.Drawing.Point(103, 217);
+            this.textBox_quequan.Name = "textBox_quequan";
+            this.textBox_quequan.Size = new System.Drawing.Size(192, 20);
+            this.textBox_quequan.TabIndex = 14;
             // 
             // dateTimePicker_ngaysinh
             // 
+            this.dateTimePicker_ngaysinh.CustomFormat = "MM-dd-yyyy";
+            this.dateTimePicker_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_ngaysinh.Location = new System.Drawing.Point(103, 187);
             this.dateTimePicker_ngaysinh.Name = "dateTimePicker_ngaysinh";
             this.dateTimePicker_ngaysinh.Size = new System.Drawing.Size(186, 20);
@@ -608,7 +610,7 @@
             // 
             this.pnlChange.Controls.Add(this.dataGridView_nhanvien);
             this.pnlChange.Location = new System.Drawing.Point(2, 257);
-            this.pnlChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlChange.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChange.Name = "pnlChange";
             this.pnlChange.Size = new System.Drawing.Size(762, 282);
             this.pnlChange.TabIndex = 33;
@@ -639,7 +641,7 @@
         private System.Windows.Forms.TextBox textBox_sdt;
         private System.Windows.Forms.TextBox textBox_dantoc;
         private System.Windows.Forms.TextBox textBox_hoten;
-        private System.Windows.Forms.TextBox textBox_diachi;
+        private System.Windows.Forms.TextBox textBox_quequan;
         private System.Windows.Forms.DateTimePicker dateTimePicker_ngaysinh;
         private System.Windows.Forms.ComboBox comboBox_gioitinh;
         private System.Windows.Forms.Label label6;
