@@ -46,6 +46,7 @@ namespace _1_QuanLyNhanSu
                 comboBox_gioitinh.Enabled = true;
                 dateTimePicker_ngaysinh.Enabled = true;
                 textBox_Luong.Enabled = true;
+                textBox_ma_ctac.Enabled = true;
                 comboBox_cv.Enabled = true;
                 comboBox_pb.Enabled = true;
                 comboBox_td.Enabled = true;
@@ -93,7 +94,7 @@ namespace _1_QuanLyNhanSu
                 comboBox_cv.Text = "";
                 comboBox_pb.Text = "";
                 comboBox_td.Text = "";
-
+                textBox_ma_ctac.Text = "";
 
                 textBox_ma.Enabled = false;
                 textBox_hoten.Enabled = false;
@@ -103,6 +104,7 @@ namespace _1_QuanLyNhanSu
                 comboBox_gioitinh.Enabled = false;
                 dateTimePicker_ngaysinh.Enabled = false;
                 textBox_Luong.Enabled = false;
+                textBox_ma_ctac.Enabled = false;
                 comboBox_cv.Enabled = false;
                 comboBox_pb.Enabled = false;
                 comboBox_td.Enabled = false;
@@ -125,6 +127,7 @@ namespace _1_QuanLyNhanSu
             comboBox_gioitinh.Enabled = false;
             dateTimePicker_ngaysinh.Enabled = false;
             textBox_Luong.Enabled = false;
+            textBox_ma_ctac.Enabled = false;
             comboBox_cv.Enabled = false;
             comboBox_pb.Enabled = false;
             comboBox_td.Enabled = false;

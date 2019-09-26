@@ -88,6 +88,8 @@
             this.button_sửa = new System.Windows.Forms.Button();
             this.button_them = new System.Windows.Forms.Button();
             this.pnlChange = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_ma_ctac = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -106,6 +108,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox_ma_ctac);
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button_load);
             this.panel1.Controls.Add(this.comboBox_ma_td);
             this.panel1.Controls.Add(this.comboBox_ma_cv);
@@ -407,7 +411,7 @@
             // 
             // textBox_Luong
             // 
-            this.textBox_Luong.Location = new System.Drawing.Point(424, 161);
+            this.textBox_Luong.Location = new System.Drawing.Point(424, 155);
             this.textBox_Luong.Name = "textBox_Luong";
             this.textBox_Luong.Size = new System.Drawing.Size(131, 20);
             this.textBox_Luong.TabIndex = 28;
@@ -424,7 +428,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(343, 161);
+            this.label10.Location = new System.Drawing.Point(343, 157);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 24;
@@ -615,6 +619,22 @@
             this.pnlChange.Size = new System.Drawing.Size(762, 282);
             this.pnlChange.TabIndex = 33;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(331, 217);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Mã công tác";
+            // 
+            // textBox_ma_ctac
+            // 
+            this.textBox_ma_ctac.Location = new System.Drawing.Point(424, 216);
+            this.textBox_ma_ctac.Name = "textBox_ma_ctac";
+            this.textBox_ma_ctac.Size = new System.Drawing.Size(131, 20);
+            this.textBox_ma_ctac.TabIndex = 42;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,6 +716,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button_load;
+        private System.Windows.Forms.TextBox textBox_ma_ctac;
+        private System.Windows.Forms.Label label15;
     }
 }
 
