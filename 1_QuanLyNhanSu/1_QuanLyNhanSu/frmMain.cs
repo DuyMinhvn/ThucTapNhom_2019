@@ -35,25 +35,12 @@ namespace _1_QuanLyNhanSu
 
         private void themNhanvien(object sender, EventArgs e)
         {
-            textBox_ma.Enabled = true;
-            textBox_hoten.Enabled = true;
-            textBox_dantoc.Enabled = true;
-            textBox_diachi.Enabled = true;
-            textBox_sdt.Enabled = true;
-            comboBox_gioitinh.Enabled = true;
-            dateTimePicker_ngaysinh.Enabled = true;
-            textBox_Luong.Enabled = true;
-            comboBox_cv.Enabled = true;
-            comboBox_pb.Enabled = true;
-            comboBox_td.Enabled = true;
-            comboBox_ma_pb.Enabled = true;
-            comboBox_ma_td.Enabled = true;
-            comboBox_ma_cv.Enabled = true;
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
         private void Form1_Load_1(object sender, EventArgs e)
         {
