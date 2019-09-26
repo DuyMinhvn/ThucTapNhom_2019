@@ -13,6 +13,7 @@ namespace _1_QuanLyNhanSu
     public partial class frmMain : Form
     {
         QLNSEntities obj = new QLNSEntities();
+        int countThem = 0;
         public frmMain()
         {
            
@@ -35,20 +36,75 @@ namespace _1_QuanLyNhanSu
 
         private void themNhanvien(object sender, EventArgs e)
         {
-            textBox_ma.Enabled = true;
-            textBox_hoten.Enabled = true;
-            textBox_dantoc.Enabled = true;
-            textBox_diachi.Enabled = true;
-            textBox_sdt.Enabled = true;
-            comboBox_gioitinh.Enabled = true;
-            dateTimePicker_ngaysinh.Enabled = true;
-            textBox_Luong.Enabled = true;
-            comboBox_cv.Enabled = true;
-            comboBox_pb.Enabled = true;
-            comboBox_td.Enabled = true;
-            comboBox_ma_pb.Enabled = true;
-            comboBox_ma_td.Enabled = true;
-            comboBox_ma_cv.Enabled = true;
+            if (countThem%2==0)
+            {
+                textBox_ma.Enabled = true;
+                textBox_hoten.Enabled = true;
+                textBox_dantoc.Enabled = true;
+                textBox_diachi.Enabled = true;
+                textBox_sdt.Enabled = true;
+                comboBox_gioitinh.Enabled = true;
+                dateTimePicker_ngaysinh.Enabled = true;
+                textBox_Luong.Enabled = true;
+                comboBox_cv.Enabled = true;
+                comboBox_pb.Enabled = true;
+                comboBox_td.Enabled = true;
+                comboBox_ma_pb.Enabled = true;
+                comboBox_ma_td.Enabled = true;
+                comboBox_ma_cv.Enabled = true;
+                if (countThem == 0)
+                {
+                    foreach (PhongBan pb in obj.PhongBan)
+                    {
+                        comboBox_pb.Items.Add(pb.TenPhongBan.ToString());
+                    }
+                    foreach (ChucVu cv in obj.ChucVu)
+                    {
+                        comboBox_cv.Items.Add(cv.TenChucVu.ToString());
+                    }
+                    foreach (TrinhDoHocVan td in obj.TrinhDoHocVan)
+                    {
+                        comboBox_td.Items.Add(td.TenTrinhDoHocVan.ToString());
+                    }
+                }
+
+                countThem++;
+            }
+            else
+            {
+                textBox_ma.Text = "";
+                textBox_hoten.Text = "";
+                textBox_dantoc.Text = "";
+                textBox_diachi.Text = "";
+                textBox_sdt.Text = "";
+                comboBox_gioitinh.Text = "";
+                dateTimePicker_ngaysinh.Text = "";
+                textBox_Luong.Text = "";
+                comboBox_cv.Text = "";
+                comboBox_pb.Text = "";
+                comboBox_td.Text = "";
+                comboBox_ma_pb.Text = "";
+                comboBox_ma_td.Text = "";
+                comboBox_ma_cv.Text = "";
+
+
+                textBox_ma.Enabled = false;
+                textBox_hoten.Enabled = false;
+                textBox_dantoc.Enabled = false;
+                textBox_diachi.Enabled = false;
+                textBox_sdt.Enabled = false;
+                comboBox_gioitinh.Enabled = false;
+                dateTimePicker_ngaysinh.Enabled = false;
+                textBox_Luong.Enabled = false;
+                comboBox_cv.Enabled = false;
+                comboBox_pb.Enabled = false;
+                comboBox_td.Enabled = false;
+                comboBox_ma_pb.Enabled = false;
+                comboBox_ma_td.Enabled = false;
+                comboBox_ma_cv.Enabled = false;
+
+                countThem++;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
