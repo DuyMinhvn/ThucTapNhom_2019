@@ -598,7 +598,25 @@
         }
 
         #endregion
-        
+        private System.Windows.Forms.DataGridView dataGridView_nhanvien;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox_sdt;
+        private System.Windows.Forms.TextBox textBox_dantoc;
+        private System.Windows.Forms.TextBox textBox_hoten;
+        private System.Windows.Forms.TextBox textBox_diachi;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_ngaysinh;
+        private System.Windows.Forms.ComboBox comboBox_gioitinh;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_xoa;
+        private System.Windows.Forms.Button button_sửa;
+        private System.Windows.Forms.Button button_them;
+        private System.Windows.Forms.Button button_luu;
+        private System.Windows.Forms.TextBox textBox_ma;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_Luong;
         private System.Windows.Forms.Label label11;
