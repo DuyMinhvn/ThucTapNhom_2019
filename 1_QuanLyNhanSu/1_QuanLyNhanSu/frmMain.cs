@@ -127,6 +127,11 @@ namespace _1_QuanLyNhanSu
         }
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            button_xoa.Enabled = true;
+            button_sửa.Enabled = true;
+            button_luu.Enabled = true;
+            button_them.Enabled = true;
+            button_load.Enabled = true;
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = false;
             textBox_dantoc.Enabled = false;
@@ -206,7 +211,8 @@ namespace _1_QuanLyNhanSu
 
         private void button_sửa_Click(object sender, EventArgs e)
         {
-            
+            button_them.Enabled = false;
+            button_xoa.Enabled = false;
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = true;
             textBox_dantoc.Enabled = true;
