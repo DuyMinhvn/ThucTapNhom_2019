@@ -167,7 +167,7 @@ namespace _1_QuanLyNhanSu
 
         private void dataGridView_nhanvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView_nhanvien.Rows.Count > 0)
+            /*if (dataGridView_nhanvien.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in dataGridView_nhanvien.SelectedRows)
                 {
@@ -185,6 +185,9 @@ namespace _1_QuanLyNhanSu
                     //textBox_hoten.Text = row.Cells[0].Value.ToString();
                 }
             }
+            */
+            int i = dataGridView_nhanvien.CurrentRow.Index;
+            textBox_ma.Text = dataGridView_nhanvien.Rows[i].Cells[0].Value.ToString();
         }
         
         private void textBox_Cv_TextChanged(object sender, EventArgs e)
