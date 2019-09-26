@@ -80,8 +80,13 @@ namespace _1_QuanLyNhanSu
                 nv.NgaySinh = DateTime.Parse(dateTimePicker_ngaysinh.Text);
                 nv.MaTrinhDoHocVan = obj.TrinhDoHocVan.Where(z => z.TenTrinhDoHocVan == comboBox_td.Text).FirstOrDefault().MaTrinhDoHocVan.ToString();
                 CongTac ct = new CongTac();
-
-
+                ct.MaNhanVien = textBox_ma.Text;
+                ct.MaCongTac = textBox_ma_ctac.Text;
+                ct.MaChucVu = obj.ChucVu.Where(z => z.TenChucVu == comboBox_cv.Text).FirstOrDefault().MaChucVu.ToString();
+                ct.MaPhongBan = obj.PhongBan.Where(z => z.TenPhongBan == comboBox_pb.Text).FirstOrDefault().MaPhongBan.ToString();
+                obj.NhanVien.Add(nv);
+                obj.CongTac.Add(ct);
+                obj.SaveChanges();
 
                 textBox_ma.Text = "";
                 textBox_hoten.Text = "";
@@ -109,6 +114,7 @@ namespace _1_QuanLyNhanSu
                 comboBox_pb.Enabled = false;
                 comboBox_td.Enabled = false;
 
+                Form1_Load_1(sender, e);
                 countThem++;
             }
         }
