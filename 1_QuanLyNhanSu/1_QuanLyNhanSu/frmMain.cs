@@ -266,5 +266,13 @@ namespace _1_QuanLyNhanSu
         {
             
         }
+
+        private void button_xoa_Click(object sender, EventArgs e)
+        {
+            obj.CongTac.Remove(obj.CongTac.Where(z => z.MaNhanVien == textBox_ma.Text).FirstOrDefault());
+            obj.NhanVien.Remove(obj.NhanVien.Where(z => z.MaNhanVien == textBox_ma.Text).FirstOrDefault());
+            obj.SaveChanges();
+            Form1_Load_1(sender,e);
+        }
     }
 }

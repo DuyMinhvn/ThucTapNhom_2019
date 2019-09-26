@@ -30,6 +30,8 @@
         {
             this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox_ma_ctac = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.button_load = new System.Windows.Forms.Button();
             this.comboBox_ma_td = new System.Windows.Forms.ComboBox();
             this.comboBox_ma_cv = new System.Windows.Forms.ComboBox();
@@ -88,8 +90,6 @@
             this.button_sửa = new System.Windows.Forms.Button();
             this.button_them = new System.Windows.Forms.Button();
             this.pnlChange = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox_ma_ctac = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -149,6 +149,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 538);
             this.panel1.TabIndex = 2;
+            // 
+            // textBox_ma_ctac
+            // 
+            this.textBox_ma_ctac.Location = new System.Drawing.Point(424, 216);
+            this.textBox_ma_ctac.Name = "textBox_ma_ctac";
+            this.textBox_ma_ctac.Size = new System.Drawing.Size(131, 20);
+            this.textBox_ma_ctac.TabIndex = 42;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(331, 217);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Mã công tác";
             // 
             // button_load
             // 
@@ -274,7 +290,7 @@
             this.toolStripSeparator4,
             this.tìmTheochứcVụToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.toolsToolStripMenuItem.Text = "&Tìm kiếm";
             // 
             // customizeToolStripMenuItem
@@ -284,7 +300,7 @@
             this.tim_kiem_que_quanToolStripMenuItem,
             this.tim_kiem_dia_chiToolStripMenuItem});
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.customizeToolStripMenuItem.Text = "Theo &cá nhân";
             // 
             // tim_kiem_tenToolStripMenuItem
@@ -308,7 +324,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(142, 6);
             // 
             // tìmTheochứcVụToolStripMenuItem
             // 
@@ -316,7 +332,7 @@
             this.tìmTheoPhòngBanToolStripMenuItem1,
             this.chứcVụToolStripMenuItem});
             this.tìmTheochứcVụToolStripMenuItem.Name = "tìmTheochứcVụToolStripMenuItem";
-            this.tìmTheochứcVụToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.tìmTheochứcVụToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.tìmTheochứcVụToolStripMenuItem.Text = "Theo &tổ chức";
             // 
             // tìmTheoPhòngBanToolStripMenuItem1
@@ -338,24 +354,24 @@
             this.toolStripSeparator5,
             this.thong_ke_chuyen_monToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.helpToolStripMenuItem.Text = "&Thống kê";
             // 
             // thong_ke_thu_nhapToolStripMenuItem
             // 
             this.thong_ke_thu_nhapToolStripMenuItem.Name = "thong_ke_thu_nhapToolStripMenuItem";
-            this.thong_ke_thu_nhapToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.thong_ke_thu_nhapToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.thong_ke_thu_nhapToolStripMenuItem.Text = "&Theo mức thu nhập";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(175, 6);
             // 
             // thong_ke_chuyen_monToolStripMenuItem
             // 
             this.thong_ke_chuyen_monToolStripMenuItem.Name = "thong_ke_chuyen_monToolStripMenuItem";
-            this.thong_ke_chuyen_monToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.thong_ke_chuyen_monToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.thong_ke_chuyen_monToolStripMenuItem.Text = "Theo chuyên môn";
             // 
             // hỗTrợToolStripMenuItem
@@ -589,6 +605,7 @@
             this.button_xoa.TabIndex = 4;
             this.button_xoa.Text = "Xóa";
             this.button_xoa.UseVisualStyleBackColor = true;
+            this.button_xoa.Click += new System.EventHandler(this.button_xoa_Click);
             // 
             // button_sửa
             // 
@@ -618,22 +635,6 @@
             this.pnlChange.Name = "pnlChange";
             this.pnlChange.Size = new System.Drawing.Size(762, 282);
             this.pnlChange.TabIndex = 33;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(331, 217);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Mã công tác";
-            // 
-            // textBox_ma_ctac
-            // 
-            this.textBox_ma_ctac.Location = new System.Drawing.Point(424, 216);
-            this.textBox_ma_ctac.Name = "textBox_ma_ctac";
-            this.textBox_ma_ctac.Size = new System.Drawing.Size(131, 20);
-            this.textBox_ma_ctac.TabIndex = 42;
             // 
             // frmMain
             // 
