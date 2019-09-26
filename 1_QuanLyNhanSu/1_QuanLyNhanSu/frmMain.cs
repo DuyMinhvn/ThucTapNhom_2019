@@ -50,6 +50,8 @@ namespace _1_QuanLyNhanSu
                 comboBox_cv.Enabled = true;
                 comboBox_pb.Enabled = true;
                 comboBox_td.Enabled = true;
+                button_sửa.Enabled = false;
+                button_xoa.Enabled = false;
                 if (countThem == 0)
                 {
                     foreach (PhongBan pb in obj.PhongBan)
@@ -204,6 +206,7 @@ namespace _1_QuanLyNhanSu
 
         private void button_sửa_Click(object sender, EventArgs e)
         {
+            
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = true;
             textBox_dantoc.Enabled = true;
@@ -275,7 +278,12 @@ namespace _1_QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            button_them.Enabled = true;
+            button_sửa.Enabled = true;
+            button_xoa.Enabled = true;
+            button_luu.Enabled = true;
+            button_load.Enabled = true;
+            Form1_Load_1(sender, e);
         }
 
         private void button_xoa_Click(object sender, EventArgs e)
