@@ -182,17 +182,25 @@ namespace _1_QuanLyNhanSu
                     textBox_Luong.Text = row.Cells[9].Value.ToString();
                     comboBox_cv.Text = row.Cells[8].Value.ToString();
                     comboBox_td.Text = row.Cells[10].Value.ToString();
-                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
                 }
             }
             */
             int i = dataGridView_nhanvien.CurrentRow.Index;
             textBox_ma.Text = dataGridView_nhanvien.Rows[i].Cells[0].Value.ToString();
+            textBox_hoten.Text = dataGridView_nhanvien.Rows[i].Cells[1].Value.ToString();
+            textBox_dantoc.Text = dataGridView_nhanvien.Rows[i].Cells[2].Value.ToString();
+            comboBox_gioitinh.Text = dataGridView_nhanvien.Rows[i].Cells[3].Value.ToString();
+            textBox_sdt.Text = dataGridView_nhanvien.Rows[i].Cells[4].Value.ToString();
+            textBox_quequan.Text = dataGridView_nhanvien.Rows[i].Cells[5].Value.ToString();
+            dateTimePicker_ngaysinh.Text = dataGridView_nhanvien.Rows[i].Cells[6].Value.ToString();
+            comboBox_pb.Text = dataGridView_nhanvien.Rows[i].Cells[7].Value.ToString();
+            textBox_Luong.Text = dataGridView_nhanvien.Rows[i].Cells[8].Value.ToString();
+            comboBox_cv.Text = dataGridView_nhanvien.Rows[i].Cells[9].Value.ToString();
+            comboBox_td.Text = dataGridView_nhanvien.Rows[i].Cells[10].Value.ToString();
         }
-        
         private void textBox_Cv_TextChanged(object sender, EventArgs e)
-        {
-        }
+            {
+            }
 
         private void button_sửa_Click(object sender, EventArgs e)
         {
