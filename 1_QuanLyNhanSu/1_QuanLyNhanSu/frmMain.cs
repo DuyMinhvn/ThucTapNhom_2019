@@ -13,6 +13,7 @@ namespace _1_QuanLyNhanSu
     public partial class frmMain : Form
     {
         QLNSEntities obj = new QLNSEntities();
+        int countThem = 0;
         public frmMain()
         {
            
@@ -35,23 +36,111 @@ namespace _1_QuanLyNhanSu
 
         private void themNhanvien(object sender, EventArgs e)
         {
+            if (countThem%2==0)
+            {
+                textBox_ma.Enabled = true;
+                textBox_hoten.Enabled = true;
+                textBox_dantoc.Enabled = true;
+                textBox_quequan.Enabled = true;
+                textBox_sdt.Enabled = true;
+                comboBox_gioitinh.Enabled = true;
+                dateTimePicker_ngaysinh.Enabled = true;
+                textBox_Luong.Enabled = true;
+                textBox_ma_ctac.Enabled = true;
+                comboBox_cv.Enabled = true;
+                comboBox_pb.Enabled = true;
+                comboBox_td.Enabled = true;
+                button_sửa.Enabled = false;
+                button_xoa.Enabled = false;
+                if (countThem == 0)
+                {
+                    foreach (PhongBan pb in obj.PhongBan)
+                    {
+                        comboBox_pb.Items.Add(pb.TenPhongBan.ToString());
+                    }
+                    foreach (ChucVu cv in obj.ChucVu)
+                    {
+                        comboBox_cv.Items.Add(cv.TenChucVu.ToString());
+                    }
+                    foreach (TrinhDoHocVan td in obj.TrinhDoHocVan)
+                    {
+                        comboBox_td.Items.Add(td.TenTrinhDoHocVan.ToString());
+                    }
+                }
 
+                countThem++;
+            }
+            else
+            {
+                NhanVien nv = new NhanVien();
+                nv.MaNhanVien = textBox_ma.Text;
+                nv.HoTen = textBox_hoten.Text;
+                nv.GioiTinh = comboBox_gioitinh.Text;
+                nv.QueQuan = textBox_quequan.Text;
+                nv.SDT = textBox_sdt.Text;
+                nv.DanToc = textBox_dantoc.Text;
+                nv.NgaySinh = DateTime.Parse(dateTimePicker_ngaysinh.Text);
+                nv.MaTrinhDoHocVan = obj.TrinhDoHocVan.Where(z => z.TenTrinhDoHocVan == comboBox_td.Text).FirstOrDefault().MaTrinhDoHocVan.ToString();
+                CongTac ct = new CongTac();
+                ct.MaNhanVien = textBox_ma.Text;
+                ct.MaCongTac = textBox_ma_ctac.Text;
+                ct.MaChucVu = obj.ChucVu.Where(z => z.TenChucVu == comboBox_cv.Text).FirstOrDefault().MaChucVu.ToString();
+                ct.MaPhongBan = obj.PhongBan.Where(z => z.TenPhongBan == comboBox_pb.Text).FirstOrDefault().MaPhongBan.ToString();
+                obj.NhanVien.Add(nv);
+                obj.CongTac.Add(ct);
+                obj.SaveChanges();
+
+                textBox_ma.Text = "";
+                textBox_hoten.Text = "";
+                textBox_dantoc.Text = "";
+                textBox_quequan.Text = "";
+                textBox_sdt.Text = "";
+                comboBox_gioitinh.Text = "";
+                dateTimePicker_ngaysinh.Text = "";
+                textBox_Luong.Text = "";
+                comboBox_cv.Text = "";
+                comboBox_pb.Text = "";
+                comboBox_td.Text = "";
+                textBox_ma_ctac.Text = "";
+
+                textBox_ma.Enabled = false;
+                textBox_hoten.Enabled = false;
+                textBox_dantoc.Enabled = false;
+                textBox_quequan.Enabled = false;
+                textBox_sdt.Enabled = false;
+                comboBox_gioitinh.Enabled = false;
+                dateTimePicker_ngaysinh.Enabled = false;
+                textBox_Luong.Enabled = false;
+                textBox_ma_ctac.Enabled = false;
+                comboBox_cv.Enabled = false;
+                comboBox_pb.Enabled = false;
+                comboBox_td.Enabled = false;
+
+                Form1_Load_1(sender, e);
+                countThem++;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            button_xoa.Enabled = true;
+            button_sửa.Enabled = true;
+            button_luu.Enabled = true;
+            button_them.Enabled = true;
+            button_load.Enabled = true;
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = false;
             textBox_dantoc.Enabled = false;
-            textBox_diachi.Enabled = false;
+            textBox_quequan.Enabled = false;
             textBox_sdt.Enabled = false;
             comboBox_gioitinh.Enabled = false;
             dateTimePicker_ngaysinh.Enabled = false;
             textBox_Luong.Enabled = false;
+            textBox_ma_ctac.Enabled = false;
             comboBox_cv.Enabled = false;
             comboBox_pb.Enabled = false;
             comboBox_td.Enabled = false;
@@ -85,7 +174,7 @@ namespace _1_QuanLyNhanSu
 
         private void dataGridView_nhanvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView_nhanvien.Rows.Count > 0)
+            /*if (dataGridView_nhanvien.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in dataGridView_nhanvien.SelectedRows)
                 {
@@ -94,27 +183,40 @@ namespace _1_QuanLyNhanSu
                     textBox_dantoc.Text = row.Cells[2].Value.ToString();
                     comboBox_gioitinh.Text = row.Cells[3].Value.ToString();
                     textBox_sdt.Text = row.Cells[4].Value.ToString();
-                    textBox_diachi.Text = row.Cells[5].Value.ToString();
+                    textBox_quequan.Text = row.Cells[5].Value.ToString();
                     dateTimePicker_ngaysinh.Text = row.Cells[6].Value.ToString();
                     comboBox_pb.Text = row.Cells[7].Value.ToString();
                     textBox_Luong.Text = row.Cells[9].Value.ToString();
                     comboBox_cv.Text = row.Cells[8].Value.ToString();
                     comboBox_td.Text = row.Cells[10].Value.ToString();
-                    //textBox_hoten.Text = row.Cells[0].Value.ToString();
                 }
             }
+            */
+            int i = dataGridView_nhanvien.CurrentRow.Index;
+            textBox_ma.Text = dataGridView_nhanvien.Rows[i].Cells[0].Value.ToString();
+            textBox_hoten.Text = dataGridView_nhanvien.Rows[i].Cells[1].Value.ToString();
+            textBox_dantoc.Text = dataGridView_nhanvien.Rows[i].Cells[2].Value.ToString();
+            comboBox_gioitinh.Text = dataGridView_nhanvien.Rows[i].Cells[3].Value.ToString();
+            textBox_sdt.Text = dataGridView_nhanvien.Rows[i].Cells[4].Value.ToString();
+            textBox_quequan.Text = dataGridView_nhanvien.Rows[i].Cells[5].Value.ToString();
+            dateTimePicker_ngaysinh.Text = dataGridView_nhanvien.Rows[i].Cells[6].Value.ToString();
+            comboBox_pb.Text = dataGridView_nhanvien.Rows[i].Cells[7].Value.ToString();
+            textBox_Luong.Text = dataGridView_nhanvien.Rows[i].Cells[8].Value.ToString();
+            comboBox_cv.Text = dataGridView_nhanvien.Rows[i].Cells[9].Value.ToString();
+            comboBox_td.Text = dataGridView_nhanvien.Rows[i].Cells[10].Value.ToString();
         }
-        
         private void textBox_Cv_TextChanged(object sender, EventArgs e)
-        {
-        }
+            {
+            }
 
         private void button_sửa_Click(object sender, EventArgs e)
         {
+            button_them.Enabled = false;
+            button_xoa.Enabled = false;
             textBox_ma.Enabled = false;
             textBox_hoten.Enabled = true;
             textBox_dantoc.Enabled = true;
-            textBox_diachi.Enabled = true;
+            textBox_quequan.Enabled = true;
             textBox_sdt.Enabled = true;
             comboBox_gioitinh.Enabled = true;
             dateTimePicker_ngaysinh.Enabled = true;
@@ -156,7 +258,7 @@ namespace _1_QuanLyNhanSu
             nv.SDT = textBox_sdt.Text;
             nv.GioiTinh = comboBox_gioitinh.Text;
             nv.NgaySinh = DateTime.Parse(dateTimePicker_ngaysinh.Text);
-            nv.QueQuan = textBox_diachi.Text;
+            nv.QueQuan = textBox_quequan.Text;
             nv.MaTrinhDoHocVan = comboBox_ma_td.Text;
             var ct = obj.CongTac.First<CongTac>();
             ct.MaChucVu = comboBox_ma_cv.Text;
@@ -182,7 +284,20 @@ namespace _1_QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            button_them.Enabled = true;
+            button_sửa.Enabled = true;
+            button_xoa.Enabled = true;
+            button_luu.Enabled = true;
+            button_load.Enabled = true;
+            Form1_Load_1(sender, e);
+        }
+
+        private void button_xoa_Click(object sender, EventArgs e)
+        {
+            obj.CongTac.Remove(obj.CongTac.Where(z => z.MaNhanVien == textBox_ma.Text).FirstOrDefault());
+            obj.NhanVien.Remove(obj.NhanVien.Where(z => z.MaNhanVien == textBox_ma.Text).FirstOrDefault());
+            obj.SaveChanges();
+            Form1_Load_1(sender,e);
         }
     }
 }
