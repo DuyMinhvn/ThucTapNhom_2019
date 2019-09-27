@@ -18,6 +18,7 @@ namespace _1_QuanLyNhanSu
         public QLNSEntities()
             : base("name=QLNSEntities")
         {
+
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

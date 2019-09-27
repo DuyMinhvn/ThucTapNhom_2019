@@ -86,10 +86,14 @@ namespace _1_QuanLyNhanSu
                 ct.MaCongTac = textBox_ma_ctac.Text;
                 ct.MaChucVu = obj.ChucVu.Where(z => z.TenChucVu == comboBox_cv.Text).FirstOrDefault().MaChucVu.ToString();
                 ct.MaPhongBan = obj.PhongBan.Where(z => z.TenPhongBan == comboBox_pb.Text).FirstOrDefault().MaPhongBan.ToString();
-                obj.NhanVien.Add(nv);
-                obj.CongTac.Add(ct);
+                //obj.NhanVien.Add(nv);
+                //obj.CongTac.Add(ct);
+                obj.Entry(nv).State = System.Data.Entity.EntityState.Added;
+                obj.Entry(ct).State = System.Data.Entity.EntityState.Added;
+
                 obj.SaveChanges();
 
+                
                 textBox_ma.Text = "";
                 textBox_hoten.Text = "";
                 textBox_dantoc.Text = "";
@@ -201,8 +205,8 @@ namespace _1_QuanLyNhanSu
             textBox_quequan.Text = dataGridView_nhanvien.Rows[i].Cells[5].Value.ToString();
             dateTimePicker_ngaysinh.Text = dataGridView_nhanvien.Rows[i].Cells[6].Value.ToString();
             comboBox_pb.Text = dataGridView_nhanvien.Rows[i].Cells[7].Value.ToString();
-            textBox_Luong.Text = dataGridView_nhanvien.Rows[i].Cells[8].Value.ToString();
-            comboBox_cv.Text = dataGridView_nhanvien.Rows[i].Cells[9].Value.ToString();
+            textBox_Luong.Text = dataGridView_nhanvien.Rows[i].Cells[9].Value.ToString();
+            comboBox_cv.Text = dataGridView_nhanvien.Rows[i].Cells[8].Value.ToString();
             comboBox_td.Text = dataGridView_nhanvien.Rows[i].Cells[10].Value.ToString();
         }
         private void textBox_Cv_TextChanged(object sender, EventArgs e)
