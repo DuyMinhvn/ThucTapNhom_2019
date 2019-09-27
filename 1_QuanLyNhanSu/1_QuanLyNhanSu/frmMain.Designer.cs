@@ -597,15 +597,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Họ tên";
             // 
-            // label6
-            // 
-            this.labe17.AutoSize = true;
-            this.labe17.Location = new System.Drawing.Point(45, 161);
-            this.labe17.Name = "labe17";
-            this.labe17.Size = new System.Drawing.Size(29, 13);
-            this.labe17.TabIndex = 11;
-            this.labe17.Text = "MA";
-            // 
             // button_xoa
             // 
             this.button_xoa.Location = new System.Drawing.Point(689, 113);
