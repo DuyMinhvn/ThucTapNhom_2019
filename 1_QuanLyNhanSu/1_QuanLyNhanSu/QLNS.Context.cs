@@ -27,8 +27,8 @@ namespace _1_QuanLyNhanSu
         }
     
         public virtual DbSet<ChucVu> ChucVu { get; set; }
-        public virtual DbSet<CongTac> CongTac { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
+        public DbSet<CongTac> CongTac { get; set; }
+        public DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<PhongBan> PhongBan { get; set; }
         public virtual DbSet<TrinhDoHocVan> TrinhDoHocVan { get; set; }
     }

@@ -86,10 +86,11 @@ namespace _1_QuanLyNhanSu
                 ct.MaCongTac = textBox_ma_ctac.Text;
                 ct.MaChucVu = obj.ChucVu.Where(z => z.TenChucVu == comboBox_cv.Text).FirstOrDefault().MaChucVu.ToString();
                 ct.MaPhongBan = obj.PhongBan.Where(z => z.TenPhongBan == comboBox_pb.Text).FirstOrDefault().MaPhongBan.ToString();
-                //obj.NhanVien.Add(nv);
-                //obj.CongTac.Add(ct);
+                
                 obj.Entry(nv).State = System.Data.Entity.EntityState.Added;
                 obj.Entry(ct).State = System.Data.Entity.EntityState.Added;
+                obj.NhanVien.Add(nv);
+                obj.CongTac.Add(ct);
 
                 obj.SaveChanges();
 
