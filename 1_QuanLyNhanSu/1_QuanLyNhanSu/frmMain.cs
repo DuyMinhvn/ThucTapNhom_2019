@@ -279,7 +279,7 @@ namespace _1_QuanLyNhanSu
 
         private void button_luu_Click(object sender, EventArgs e)
         {
-            obj.SaveChangesAsync();
+            obj.SaveChanges();
         }
 
         private void button1_Click(object sender, EventArgs e)
