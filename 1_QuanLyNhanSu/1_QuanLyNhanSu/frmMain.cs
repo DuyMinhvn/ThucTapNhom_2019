@@ -173,7 +173,16 @@ namespace _1_QuanLyNhanSu
                              TenTDHv = td.TenTrinhDoHocVan
 
                          });
-            dataGridView_nhanvien.DataSource = model.ToList();
+            try
+            {
+                dataGridView_nhanvien.DataSource = model.ToList();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Not Connected");
+                throw;
+            }
+            
 
         }
 
