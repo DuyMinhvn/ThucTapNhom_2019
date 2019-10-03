@@ -110,6 +110,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BangDiem.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GiaoVien.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HocSinh.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KetQuaHocTap.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Lop.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MonHoc.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QLHSGV.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHSGV.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QLHSGV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QLHSGV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHSGV.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLiGiangDay.cs">
+      <DependentUpon>QLHSGV.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHSGV.Context.cs">
@@ -138,6 +174,13 @@
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="Model\QLHSGV.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLHSGV.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\QLHSGV.edmx.diagram">
+      <DependentUpon>QLHSGV.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +193,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\QLHSGV.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLHSGV.edmx</DependentUpon>
+      <LastGenOutput>QLHSGV.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\QLHSGV.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLHSGV.edmx</DependentUpon>
+      <LastGenOutput>QLHSGV.cs</LastGenOutput>
+    </Content>
     <Content Include="QLHSGV.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>QLHSGV.Context.cs</LastGenOutput>
@@ -179,7 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
