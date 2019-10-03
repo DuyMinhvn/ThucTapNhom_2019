@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_load = new System.Windows.Forms.Button();
             this.button_luu = new System.Windows.Forms.Button();
             this.button_xoa = new System.Windows.Forms.Button();
             this.button_sua = new System.Windows.Forms.Button();
             this.button_Them = new System.Windows.Forms.Button();
-            this.button_load = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -48,16 +48,25 @@
             this.groupBox1.Controls.Add(this.button_xoa);
             this.groupBox1.Controls.Add(this.button_sua);
             this.groupBox1.Controls.Add(this.button_Them);
-            this.groupBox1.Location = new System.Drawing.Point(13, 3);
+            this.groupBox1.Location = new System.Drawing.Point(13, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1008, 262);
+            this.groupBox1.Size = new System.Drawing.Size(1008, 221);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // button_load
+            // 
+            this.button_load.Location = new System.Drawing.Point(918, 169);
+            this.button_load.Name = "button_load";
+            this.button_load.Size = new System.Drawing.Size(75, 23);
+            this.button_load.TabIndex = 9;
+            this.button_load.Text = "Load";
+            this.button_load.UseVisualStyleBackColor = true;
+            // 
             // button_luu
             // 
-            this.button_luu.Location = new System.Drawing.Point(918, 162);
+            this.button_luu.Location = new System.Drawing.Point(918, 129);
             this.button_luu.Name = "button_luu";
             this.button_luu.Size = new System.Drawing.Size(75, 23);
             this.button_luu.TabIndex = 8;
@@ -66,7 +75,7 @@
             // 
             // button_xoa
             // 
-            this.button_xoa.Location = new System.Drawing.Point(918, 112);
+            this.button_xoa.Location = new System.Drawing.Point(918, 89);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(75, 23);
             this.button_xoa.TabIndex = 7;
@@ -75,7 +84,7 @@
             // 
             // button_sua
             // 
-            this.button_sua.Location = new System.Drawing.Point(918, 65);
+            this.button_sua.Location = new System.Drawing.Point(918, 50);
             this.button_sua.Name = "button_sua";
             this.button_sua.Size = new System.Drawing.Size(75, 23);
             this.button_sua.TabIndex = 6;
@@ -84,21 +93,12 @@
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(918, 21);
+            this.button_Them.Location = new System.Drawing.Point(918, 11);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(75, 23);
             this.button_Them.TabIndex = 5;
             this.button_Them.Text = "Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
-            // 
-            // button_load
-            // 
-            this.button_load.Location = new System.Drawing.Point(918, 205);
-            this.button_load.Name = "button_load";
-            this.button_load.Size = new System.Drawing.Size(75, 23);
-            this.button_load.TabIndex = 9;
-            this.button_load.Text = "Load";
-            this.button_load.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
