@@ -10,6 +10,8 @@ namespace QuanLyHSGV
 {
     static class Program
     {
+        public static object BonusSkins { get; private set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,7 +21,7 @@ namespace QuanLyHSGV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            BonusSkins.Register();
+           // BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
             Application.Run(new QLHSGV());
