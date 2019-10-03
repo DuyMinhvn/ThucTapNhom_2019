@@ -48,29 +48,45 @@
             this.groupBox1.Controls.Add(this.button_xoa);
             this.groupBox1.Controls.Add(this.button_sua);
             this.groupBox1.Controls.Add(this.button_Them);
+<<<<<<< HEAD
+            this.groupBox1.Location = new System.Drawing.Point(13, 44);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1008, 221);
+=======
             this.groupBox1.Location = new System.Drawing.Point(10, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(756, 213);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
             // button_load
             // 
+<<<<<<< HEAD
+            this.button_load.Location = new System.Drawing.Point(918, 169);
+            this.button_load.Name = "button_load";
+            this.button_load.Size = new System.Drawing.Size(75, 23);
+=======
             this.button_load.Location = new System.Drawing.Point(688, 167);
             this.button_load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_load.Name = "button_load";
             this.button_load.Size = new System.Drawing.Size(56, 19);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.button_load.TabIndex = 9;
             this.button_load.Text = "Load";
             this.button_load.UseVisualStyleBackColor = true;
             // 
             // button_luu
             // 
+<<<<<<< HEAD
+            this.button_luu.Location = new System.Drawing.Point(918, 129);
+=======
             this.button_luu.Location = new System.Drawing.Point(688, 128);
             this.button_luu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.button_luu.Name = "button_luu";
             this.button_luu.Size = new System.Drawing.Size(56, 19);
             this.button_luu.TabIndex = 8;
@@ -79,8 +95,12 @@
             // 
             // button_xoa
             // 
+<<<<<<< HEAD
+            this.button_xoa.Location = new System.Drawing.Point(918, 89);
+=======
             this.button_xoa.Location = new System.Drawing.Point(688, 91);
             this.button_xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(56, 19);
             this.button_xoa.TabIndex = 7;
@@ -90,8 +110,12 @@
             // 
             // button_sua
             // 
+<<<<<<< HEAD
+            this.button_sua.Location = new System.Drawing.Point(918, 50);
+=======
             this.button_sua.Location = new System.Drawing.Point(688, 55);
             this.button_sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.button_sua.Name = "button_sua";
             this.button_sua.Size = new System.Drawing.Size(56, 19);
             this.button_sua.TabIndex = 6;
@@ -100,8 +124,12 @@
             // 
             // button_Them
             // 
+<<<<<<< HEAD
+            this.button_Them.Location = new System.Drawing.Point(918, 11);
+=======
             this.button_Them.Location = new System.Drawing.Point(688, 17);
             this.button_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(56, 19);
             this.button_Them.TabIndex = 5;
