@@ -147,16 +147,13 @@
       <LastGenOutput>QLNS.Context.cs</LastGenOutput>
       <DependentUpon>QLNS.edmx</DependentUpon>
     </Content>
-    <Content Include="QLNS.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="QLNS.mdf" />
     <Content Include="QLNS.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QLNS.edmx</DependentUpon>
       <LastGenOutput>QLNS.cs</LastGenOutput>
     </Content>
     <Content Include="QLNS_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QLNS.mdf</DependentUpon>
     </Content>
     <None Include="Resources\tải xuống.png" />

@@ -16,5 +16,10 @@ namespace QuanLyHSGV
         {
             InitializeComponent();
         }
+
+        private void xoaGV(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
