@@ -81,6 +81,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NhanVien.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
