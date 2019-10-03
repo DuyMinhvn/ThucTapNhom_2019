@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace QuanLyHSGV
 {
-    public partial class QLHSGV : Form
+    public partial class QLHSGV : DevExpress.XtraEditors.XtraForm
     {
         public QLHSGV()
         {
             InitializeComponent();
-        }
-
-        private void xoaGV(object sender, EventArgs e)
-        {
-            
         }
     }
 }
