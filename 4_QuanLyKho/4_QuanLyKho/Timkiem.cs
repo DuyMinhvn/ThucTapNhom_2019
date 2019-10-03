@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace _4_QuanLyKho
 {
-    public partial class Form1 : Form
+    public partial class Timkiem : Form
     {
-        public Form1()
+        public Timkiem()
         {
             InitializeComponent();
-        }
-
-        private void timkiem(object sender, EventArgs e)
-        {
-            Timkiem tkm = new Timkiem();
-            tkm.Show();
         }
     }
 }
