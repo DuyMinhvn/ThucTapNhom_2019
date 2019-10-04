@@ -17,10 +17,5 @@ namespace _4_QuanLyKho
             InitializeComponent();
         }
 
-        private void timkiem(object sender, EventArgs e)
-        {
-            Timkiem tkm = new Timkiem();
-            tkm.Show();
-        }
     }
 }
