@@ -28,163 +28,200 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_load = new System.Windows.Forms.Button();
-            this.button_luu = new System.Windows.Forms.Button();
-            this.button_xoa = new System.Windows.Forms.Button();
-            this.button_sua = new System.Windows.Forms.Button();
-            this.button_Them = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLHSGV));
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButton_Hocsinh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButton_Giaovien = new DevExpress.XtraBars.BarButtonItem();
+            this.barButton_Lop = new DevExpress.XtraBars.BarButtonItem();
+            this.barButton_PhanCong = new DevExpress.XtraBars.BarButtonItem();
+            this.barButton_Bangdiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButton_KetQua = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // ribbonControl1
             // 
-            this.groupBox1.Controls.Add(this.button_load);
-            this.groupBox1.Controls.Add(this.button_luu);
-            this.groupBox1.Controls.Add(this.button_xoa);
-            this.groupBox1.Controls.Add(this.button_sua);
-            this.groupBox1.Controls.Add(this.button_Them);
-<<<<<<< HEAD
-            this.groupBox1.Location = new System.Drawing.Point(13, 44);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1008, 221);
-=======
-            this.groupBox1.Location = new System.Drawing.Point(10, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(756, 213);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.barButton_Hocsinh,
+            this.barButtonItem3,
+            this.barButton_Giaovien,
+            this.barButton_Lop,
+            this.barButton_PhanCong,
+            this.barButton_Bangdiem,
+            this.barButton_KetQua,
+            this.barButtonItem9});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1,
+            this.ribbonPage2,
+            this.ribbonPage3});
+            this.ribbonControl1.Size = new System.Drawing.Size(1113, 177);
             // 
-            // button_load
+            // ribbonPage1
             // 
-<<<<<<< HEAD
-            this.button_load.Location = new System.Drawing.Point(918, 169);
-            this.button_load.Name = "button_load";
-            this.button_load.Size = new System.Drawing.Size(75, 23);
-=======
-            this.button_load.Location = new System.Drawing.Point(688, 167);
-            this.button_load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button_load.Name = "button_load";
-            this.button_load.Size = new System.Drawing.Size(56, 19);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.button_load.TabIndex = 9;
-            this.button_load.Text = "Load";
-            this.button_load.UseVisualStyleBackColor = true;
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Giáo Viên";
             // 
-            // button_luu
+            // ribbonPageGroup1
             // 
-<<<<<<< HEAD
-            this.button_luu.Location = new System.Drawing.Point(918, 129);
-=======
-            this.button_luu.Location = new System.Drawing.Point(688, 128);
-            this.button_luu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.button_luu.Name = "button_luu";
-            this.button_luu.Size = new System.Drawing.Size(56, 19);
-            this.button_luu.TabIndex = 8;
-            this.button_luu.Text = "Lưu";
-            this.button_luu.UseVisualStyleBackColor = true;
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButton_Giaovien);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButton_Lop);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButton_PhanCong);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
-            // button_xoa
+            // ribbonPage2
             // 
-<<<<<<< HEAD
-            this.button_xoa.Location = new System.Drawing.Point(918, 89);
-=======
-            this.button_xoa.Location = new System.Drawing.Point(688, 91);
-            this.button_xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.button_xoa.Name = "button_xoa";
-            this.button_xoa.Size = new System.Drawing.Size(56, 19);
-            this.button_xoa.TabIndex = 7;
-            this.button_xoa.Text = "Xóa";
-            this.button_xoa.UseVisualStyleBackColor = true;
-            this.button_xoa.Click += new System.EventHandler(this.xoaGV);
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup4});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Học sinh";
             // 
-            // button_sua
+            // ribbonPageGroup2
             // 
-<<<<<<< HEAD
-            this.button_sua.Location = new System.Drawing.Point(918, 50);
-=======
-            this.button_sua.Location = new System.Drawing.Point(688, 55);
-            this.button_sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.button_sua.Name = "button_sua";
-            this.button_sua.Size = new System.Drawing.Size(56, 19);
-            this.button_sua.TabIndex = 6;
-            this.button_sua.Text = "Sửa";
-            this.button_sua.UseVisualStyleBackColor = true;
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButton_Hocsinh);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButton_Bangdiem);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButton_KetQua);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Học Sinh";
             // 
-            // button_Them
+            // barButton_Hocsinh
             // 
-<<<<<<< HEAD
-            this.button_Them.Location = new System.Drawing.Point(918, 11);
-=======
-            this.button_Them.Location = new System.Drawing.Point(688, 17);
-            this.button_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 4319c219bcc23838dbc51e08e890cdb6209eb01c
-            this.button_Them.Name = "button_Them";
-            this.button_Them.Size = new System.Drawing.Size(56, 19);
-            this.button_Them.TabIndex = 5;
-            this.button_Them.Text = "Thêm";
-            this.button_Them.UseVisualStyleBackColor = true;
+            this.barButton_Hocsinh.Caption = "Thông Tin Học Sinh";
+            this.barButton_Hocsinh.Id = 1;
+            this.barButton_Hocsinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButton_Hocsinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButton_Hocsinh.Name = "barButton_Hocsinh";
             // 
-            // groupBox2
+            // barButtonItem2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(9, 220);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(757, 202);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.barButtonItem2.Caption = "Thông Tin";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // dataGridView1
+            // barButtonItem3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(753, 185);
-            this.dataGridView1.TabIndex = 0;
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Quản Lý";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Quản Lý";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
+            // barButton_Giaovien
+            // 
+            this.barButton_Giaovien.Caption = "Thông Tin Giáo Viên";
+            this.barButton_Giaovien.Id = 3;
+            this.barButton_Giaovien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.barButton_Giaovien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButton_Giaovien.Name = "barButton_Giaovien";
+            // 
+            // barButton_Lop
+            // 
+            this.barButton_Lop.Caption = "Lớp";
+            this.barButton_Lop.Id = 4;
+            this.barButton_Lop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButton_Lop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButton_Lop.Name = "barButton_Lop";
+            // 
+            // barButton_PhanCong
+            // 
+            this.barButton_PhanCong.Caption = "Phân Công Giảng Dạy";
+            this.barButton_PhanCong.Id = 5;
+            this.barButton_PhanCong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
+            this.barButton_PhanCong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.barButton_PhanCong.Name = "barButton_PhanCong";
+            // 
+            // barButton_Bangdiem
+            // 
+            this.barButton_Bangdiem.Caption = "Bảng Điểm";
+            this.barButton_Bangdiem.Id = 6;
+            this.barButton_Bangdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButton_Bangdiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.barButton_Bangdiem.Name = "barButton_Bangdiem";
+            // 
+            // barButton_KetQua
+            // 
+            this.barButton_KetQua.Caption = "Kết Quả Học Tập";
+            this.barButton_KetQua.Id = 7;
+            this.barButton_KetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.barButton_KetQua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.barButton_KetQua.Name = "barButton_KetQua";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Môn Học";
+            this.barButtonItem9.Id = 8;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.barButtonItem9.Name = "barButtonItem9";
             // 
             // QLHSGV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 431);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1113, 468);
+            this.Controls.Add(this.ribbonControl1);
             this.Name = "QLHSGV";
             this.Text = "QLHSGV";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button_load;
-        private System.Windows.Forms.Button button_luu;
-        private System.Windows.Forms.Button button_xoa;
-        private System.Windows.Forms.Button button_sua;
-        private System.Windows.Forms.Button button_Them;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem barButton_Hocsinh;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButton_Giaovien;
+        private DevExpress.XtraBars.BarButtonItem barButton_Lop;
+        private DevExpress.XtraBars.BarButtonItem barButton_PhanCong;
+        private DevExpress.XtraBars.BarButtonItem barButton_Bangdiem;
+        private DevExpress.XtraBars.BarButtonItem barButton_KetQua;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
